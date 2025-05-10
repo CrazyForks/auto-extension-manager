@@ -1,0 +1,833 @@
+{
+  "ext_name": {
+    "message": "擴展管理器（Extension Manager）"
+  },
+  "ext_desc": {
+    "message": "一個可以自由配置規則的擴展管理工具"
+  },
+  "add": {
+    "message": "添加"
+  },
+  "update": {
+    "message": "更新"
+  },
+  "cancel": {
+    "message": "取消"
+  },
+  "save": {
+    "message": "保存"
+  },
+  "help": {
+    "message": "幫助"
+  },
+  "delete": {
+    "message": "刪除"
+  },
+  "got_it": {
+    "message": "知道了"
+  },
+  "no_more_prompts": {
+    "message": "不再提示"
+  },
+  "scene_title": {
+    "message": "情景模式"
+  },
+  "scene_cancel_all": {
+    "message": "取消所有"
+  },
+  "group_title": {
+    "message": "分組管理"
+  },
+  "group_unselect": {
+    "message": "未選擇分組"
+  },
+  "group_select_all": {
+    "message": "全部"
+  },
+  "group_include": {
+    "message": "「$1」中的擴展"
+  },
+  "group_not_include": {
+    "message": "不在此分組"
+  },
+  "group_not_include_hidden_fixed": {
+    "message": "不顯示「固定分組」中的擴展"
+  },
+  "group_not_include_hidden_hidden": {
+    "message": "不顯示「隱藏分組」中的擴展"
+  },
+  "group_not_include_hidden_other": {
+    "message": "不顯示其它分組中的擴展"
+  },
+  "group_new": {
+    "message": "新建分組"
+  },
+  "group_edit": {
+    "message": "編輯分組"
+  },
+  "group_name_cannot_empty": {
+    "message": "分組名稱不能為空"
+  },
+  "group_name": {
+    "message": "分組名稱"
+  },
+  "group_desc": {
+    "message": "分組描述"
+  },
+  "group_fixed_name": {
+    "message": "固定分組"
+  },
+  "group_fixed_desc": {
+    "message": "這是一個內置分組，此分組中的擴展，在 Popup 中手動切換分組時，不會被禁用。通常將常駐的擴展放在此分組中。注意：如果在規則配置中，明確配置關閉某個擴展，即使此擴展在固定分組中，禁用依舊有效。"
+  },
+  "group_hidden_name": {
+    "message": "隱藏分組"
+  },
+  "group_hidden_desc": {
+    "message": "這是一個內置分組，此分組中的擴展，在 Popup 中不會顯示。"
+  },
+  "group_no_group_name": {
+    "message": "未分組"
+  },
+  "group_inner_cannot_edit": {
+    "message": "內置分組不能被編輯"
+  },
+  "group_inner_cannot_delete": {
+    "message": "內置分組不能被刪除"
+  },
+  "group_delete_title": {
+    "message": "刪除分組"
+  },
+  "group_delete_confirm": {
+    "message": "確認刪除分組 \"$1\""
+  },
+  "group_may_redundant": {
+    "message": "可能是重複操作"
+  },
+  "group_may_redundant_desc": {
+    "message": "此擴展已經在固定分組中，切換分組時擴展將始終被激活"
+  },
+  "enable_extension": {
+    "message": "啓用"
+  },
+  "disable_extension": {
+    "message": "禁用"
+  },
+  "remove_extension": {
+    "message": "移除擴展"
+  },
+  "remove_extension_confirm": {
+    "message": "確認要從瀏覽器中移除 $1"
+  },
+  "extension_not_enable": {
+    "message": "擴展未啓用"
+  },
+  "app_not_enable": {
+    "message": "未啓用"
+  },
+  "about_title": {
+    "message": "關於"
+  },
+  "about_desc": {
+    "message": "一個可以根據規則自動打開或關閉瀏覽器擴展的工具"
+  },
+  "about_feedback": {
+    "message": "問題反饋"
+  },
+  "about_help": {
+    "message": "查看幫助"
+  },
+  "about_version": {
+    "message": "版本"
+  },
+  "about_version_update_tip": {
+    "message": "版本過低，建議升級"
+  },
+  "about_storage_usage": {
+    "message": "瀏覽器同步存儲空間使用情況：情景模式($1), 分組($2), 別名備註($3), 規則設置($4)"
+  },
+  "column_index": {
+    "message": "序號"
+  },
+  "column_time": {
+    "message": "時間"
+  },
+  "column_event": {
+    "message": "事件"
+  },
+  "column_name": {
+    "message": "名稱"
+  },
+  "column_version": {
+    "message": "版本"
+  },
+  "column_remark": {
+    "message": "備註"
+  },
+  "column_extension": {
+    "message": "擴展"
+  },
+  "column_alias": {
+    "message": "別名"
+  },
+  "history_absolute_time": {
+    "message": "絕對時間"
+  },
+  "history_close_feature": {
+    "message": "關閉歷史記錄功能"
+  },
+  "history_clean_record": {
+    "message": "清空記錄"
+  },
+  "history_hidden_record": {
+    "message": "隱藏的記錄"
+  },
+  "history_cause": {
+    "message": "由"
+  },
+  "history_raise": {
+    "message": "觸發"
+  },
+  "history_rule": {
+    "message": "規則"
+  },
+  "history_switch_group": {
+    "message": "切換分組"
+  },
+  "history_manage_extension": {
+    "message": "管理擴展程序"
+  },
+  "history_title": {
+    "message": "歷史記錄"
+  },
+  "history_install": {
+    "message": "安裝"
+  },
+  "history_uninstall": {
+    "message": "卸載"
+  },
+  "history_update": {
+    "message": "更新"
+  },
+  "history_enable": {
+    "message": "啓用"
+  },
+  "history_disable": {
+    "message": "禁用"
+  },
+  "history_browser_update": {
+    "message": "瀏覽器更新"
+  },
+  "management_show_operation": {
+    "message": "顯示操作菜單"
+  },
+  "management_show_more_detail": {
+    "message": "顯示更多詳情"
+  },
+  "alias_exist": {
+    "message": "存在別名"
+  },
+  "alias_remark_exist": {
+    "message": "存在備註"
+  },
+  "alias_empty": {
+    "message": "未設置別名"
+  },
+  "alias_remark_empty": {
+    "message": "未設置備註"
+  },
+  "alias_max_length": {
+    "message": "擴展別名長度最大 50"
+  },
+  "alias_remark_max_length": {
+    "message": "備註長度最大為 100"
+  },
+  "management_title": {
+    "message": "擴展管理"
+  },
+  "setting_title": {
+    "message": "通用設置"
+  },
+  "rule_title": {
+    "message": "規則設置"
+  },
+  "rule_tip_no_set_time": {
+    "message": "[動作] 沒有指定啓用或禁用擴展的時機"
+  },
+  "rule_tip_no_set_url_method_enable": {
+    "message": "[動作] （啓用插件）沒有指定 URL 匹配的計算方式"
+  },
+  "rule_tip_no_set_url_method_disable": {
+    "message": "[動作] （禁用插件）沒有指定 URL 匹配的計算方式"
+  },
+  "rule_set_time_of_enable": {
+    "message": "（啓用插件）設置啓用目標插件的時機"
+  },
+  "rule_set_time_of_disable": {
+    "message": "（禁用插件）設置禁用目標插件的時機"
+  },
+  "rule_set_when_enable_none": {
+    "message": "不自動啓用"
+  },
+  "rule_set_when_disable_none": {
+    "message": "不自動禁用"
+  },
+  "rule_set_when_match": {
+    "message": "條件匹配時"
+  },
+  "rule_set_when_not_match": {
+    "message": "條件不匹配時"
+  },
+  "rule_set_url_match_method_enable": {
+    "message": "（啓用插件）URL 匹配的計算方式"
+  },
+  "rule_set_url_not_match_method_enable": {
+    "message": "（啓用插件）URL 不匹配的計算方式"
+  },
+  "rule_set_url_match_method_disable": {
+    "message": "（禁用插件）URL 匹配的計算方式"
+  },
+  "rule_set_url_not_match_method_disable": {
+    "message": "（禁用插件）URL 不匹配的計算方式"
+  },
+  "rule_set_url_enable_current_match": {
+    "message": "當前標籤匹配（只有當前標籤頁匹配時，擴展才會被開啓）"
+  },
+  "rule_set_url_enable_any_match": {
+    "message": "任一標籤匹配（所有標籤中任一標籤頁匹配時，擴展就會被開啓）"
+  },
+  "rule_set_url_enable_current_not_match": {
+    "message": "當前標籤不匹配（只要當前標籤不匹配，擴展就會被開啓）"
+  },
+  "rule_set_url_enable_all_not_match": {
+    "message": "所有標籤不匹配（只有所有標籤都不匹配，擴展才會被開啓）"
+  },
+  "rule_set_url_disable_current_match": {
+    "message": "當前標籤匹配（只有當前標籤頁匹配時，擴展才會被禁用）"
+  },
+  "rule_set_url_disable_any_match": {
+    "message": "任一標籤匹配（所有標籤中任一標籤頁匹配時，擴展就會被禁用）"
+  },
+  "rule_set_url_disable_current_not_match": {
+    "message": "當前標籤不匹配（只要當前標籤不匹配，擴展就會被禁用）"
+  },
+  "rule_set_url_disable_all_not_match": {
+    "message": "所有標籤不匹配（只有所有標籤都不匹配，擴展才會被禁用）"
+  },
+  "rule_set_target_no_any_target": {
+    "message": "執行目標沒有選擇任何擴展或擴展組"
+  },
+  "rule_set_target_title": {
+    "message": "規則執行目標：擴展（組）"
+  },
+  "rule_set_target_select_extension_group": {
+    "message": "選擇擴展組"
+  },
+  "rule_set_target_select_extension": {
+    "message": "選擇擴展"
+  },
+  "rule_set_target_no_selected_extension": {
+    "message": "未選擇任何擴展"
+  },
+  "rule_set_target_other_extension": {
+    "message": "其它擴展"
+  },
+  "rule_set_target_no_any_extension": {
+    "message": "無任何擴展"
+  },
+  "rule_trigger_url_name": {
+    "message": "URL 鏈接"
+  },
+  "rule_trigger_scene_name": {
+    "message": "情景模式"
+  },
+  "rule_trigger_os_name": {
+    "message": "操作系統類型"
+  },
+  "rule_trigger_period_name": {
+    "message": "時間區間"
+  },
+  "rule_set_match_at_least_one": {
+    "message": "[匹配條件] 至少添加一個匹配條件"
+  },
+  "rule_set_match_cannot_duplicate": {
+    "message": "不能重複添加條件 $1"
+  },
+  "rule_set_match_title": {
+    "message": "匹配條件"
+  },
+  "rule_set_match_add": {
+    "message": "添加匹配條件"
+  },
+  "rule_set_match_all": {
+    "message": "滿足以下所有條件"
+  },
+  "rule_set_match_any": {
+    "message": "滿足以下任一條件"
+  },
+  "rule_match_url_tip": {
+    "message": "默認按照當前打開的瀏覽器標籤計算 URL 匹配。切換標籤就會導致 URL 匹配發生變化。更多匹配方式，可在自定義中設置。（無 URL 匹配條件則無需關注此問題）"
+  },
+  "rule_action_close_when_matched": {
+    "message": "匹配後關閉"
+  },
+  "rule_action_close_when_match_desc": {
+    "message": "匹配後關閉：條件匹配時，自動關閉擴展；（不會自動啓用擴展）"
+  },
+  "rule_action_open_when_matched": {
+    "message": "匹配後打開"
+  },
+  "rule_action_open_when_matched_desc": {
+    "message": "匹配後打開：條件匹配時，自動打開擴展；（不會自動關閉擴展）"
+  },
+  "rule_action_close_only_when_matched": {
+    "message": "匹配才關閉"
+  },
+  "rule_action_close_only_when_matched_desc": {
+    "message": "匹配才關閉：條件匹配時，自動關閉擴展；條件不匹配時，自動打開擴展。"
+  },
+  "rule_action_open_only_when_matched": {
+    "message": "匹配才打開"
+  },
+  "rule_action_open_only_when_matched_desc": {
+    "message": "匹配才打開：條件匹配時，自動打開擴展；條件不匹配時，自動關閉擴展；"
+  },
+  "rule_action_custom": {
+    "message": "自定義"
+  },
+  "rule_action_custom_desc": {
+    "message": "自定義啓用或禁用擴展的時機"
+  },
+  "rule_action_none": {
+    "message": "無"
+  },
+  "rule_action_none_desc": {
+    "message": "不自動啓用與禁用擴展"
+  },
+  "rule_action_top_extension": {
+    "message": "在 Popup 中置頂顯示擴展"
+  },
+  "rule_action_top_title": {
+    "message": "置頂顯示"
+  },
+  "rule_action_no_any_action": {
+    "message": "沒有設置任何動作類型"
+  },
+  "rule_action_please_select_action": {
+    "message": "請選擇動作類型"
+  },
+  "rule_action_title": {
+    "message": "動作"
+  },
+  "rule_action_help": {
+    "message": "查看幫助"
+  },
+  "rule_action_auto_reload_when_enable": {
+    "message": "啓用擴展之後，刷新當前頁面"
+  },
+  "rule_action_auto_reload_when_disable": {
+    "message": "禁用擴展之後，刷新當前頁面"
+  },
+  "rule_action_delete_action": {
+    "message": "刪除規則"
+  },
+  "rule_view_match_url_tip": {
+    "message": "$1 等 $2 條"
+  },
+  "rule_edit_save_error_limit": {
+    "message": "保存失敗，超過瀏覽器存儲限制"
+  },
+  "rule_column_match": {
+    "message": "匹配"
+  },
+  "rule_column_extensions": {
+    "message": "擴展(組)"
+  },
+  "rule_column_action": {
+    "message": "動作"
+  },
+  "rule_column_operation": {
+    "message": "操作"
+  },
+  "rule_add": {
+    "message": "新增"
+  },
+  "trigger_os_select_one": {
+    "message": "請至少選擇一個操作系統類型"
+  },
+  "trigger_os_select_tip": {
+    "message": "選擇需要匹配的操作系統，可以多選"
+  },
+  "trigger_scene_no_any": {
+    "message": "沒有選擇任何情景模式"
+  },
+  "trigger_scene_no_created": {
+    "message": "沒有創建任何情景模式，請先創建"
+  },
+  "trigger_scene_select_one": {
+    "message": "選擇需要匹配的情景模式，可以多選"
+  },
+  "trigger_scene_select_tip": {
+    "message": "選擇情景模式"
+  },
+  "trigger_url_no_any": {
+    "message": "[匹配條件] 沒有添加任何 URL"
+  },
+  "trigger_url_match_desc": {
+    "message": "URL 默認是指當前打開的那個標籤中的 URL，具體匹配規則見詳細説明"
+  },
+  "trigger_url_match_detail_title": {
+    "message": "詳細説明"
+  },
+  "trigger_url_match_method_title": {
+    "message": "匹配方式："
+  },
+  "trigger_url_wildcard": {
+    "message": "通配符"
+  },
+  "trigger_url_regex": {
+    "message": "正則表達式"
+  },
+  "trigger_url_use_full": {
+    "message": "使用完整 URL 進行計算"
+  },
+  "trigger_url_use_full_desc": {
+    "message": "默認情況下，不考慮 URL 中的查詢參數和錨點部分，詳細説明見文檔"
+  },
+  "trigger_url_add_pattern": {
+    "message": "添加 URL Pattern"
+  },
+  "trigger_url_clear_empty": {
+    "message": "清除空白項"
+  },
+  "trigger_period_no_any": {
+    "message": "請至少設置一個時間區間"
+  },
+  "trigger_period_max": {
+    "message": "最多設置10個時間區間"
+  },
+  "trigger_period_no_complete": {
+    "message": "請選擇完整的時間區間"
+  },
+  "trigger_period_cannot_greater": {
+    "message": "開始時間不能大於等於結束時間"
+  },
+  "trigger_period_cannot_overlap": {
+    "message": "時間區間存在交叉，請重新設置"
+  },
+  "trigger_period_action_desc": {
+    "message": "由於瀏覽器限制，後台操作不能常駐，必須由事件觸發。所以僅在瀏覽器有活動時，才能觸發此條件的匹配，時機會不精確。"
+  },
+  "trigger_period_start_time": {
+    "message": "開始時間"
+  },
+  "trigger_period_end_time": {
+    "message": "結束時間"
+  },
+  "scene_current_active": {
+    "message": "當前激活的情景模式："
+  },
+  "scene_current_active_none": {
+    "message": "當前未激活任何情景模式"
+  },
+  "scene_add_new": {
+    "message": "新增情景模式"
+  },
+  "scene_edit_title": {
+    "message": "編輯情景模式"
+  },
+  "scene_edit_name": {
+    "message": "名稱"
+  },
+  "scene_edit_desc": {
+    "message": "描述"
+  },
+  "setting_import_finish": {
+    "message": "導入完成"
+  },
+  "setting_import_fail": {
+    "message": "導入失敗"
+  },
+  "setting_popup_ui_setting": {
+    "message": "Popup 顯示偏好設置"
+  },
+  "setting_popup_setting_search": {
+    "message": "搜索"
+  },
+  "setting_popup_setting_display": {
+    "message": "顯示內容"
+  },
+  "setting_popup_setting_group_sort": {
+    "message": "分組與排序"
+  },
+  "setting_popup_setting_other": {
+    "message": "其它"
+  },
+  "setting_popup_function_setting": {
+    "message": "Popup 功能偏好設置"
+  },
+  "setting_import_config": {
+    "message": "導入配置"
+  },
+  "setting_export_config": {
+    "message": "導出配置"
+  },
+  "setting_restore_default": {
+    "message": "恢復默認"
+  },
+  "setting_restore_default_tip": {
+    "message": "將通用設置重置為默認"
+  },
+  "setting_clear_title": {
+    "message": "清空配置"
+  },
+  "setting_clear_confirm_title": {
+    "message": "刪除所有配置"
+  },
+  "setting_clear_confirm_content": {
+    "message": "此操作將刪除情景模式、分組、別名、規則等所有數據"
+  },
+  "setting_ui_search_display": {
+    "message": "搜索框：默認顯示（未開啓時點擊 🔍 顯示）"
+  },
+  "setting_ui_search_display_tip": {
+    "message": "也可以使用快捷鍵 'F' 打開搜索框"
+  },
+  "setting_ui_search_jump": {
+    "message": "搜索框：支持跳轉應用商店搜索"
+  },
+  "setting_ui_search_jump_tip": {
+    "message": "開啓之後，可以跳轉到瀏覽器應用商店搜索擴展（支持 Enter 快捷跳轉）"
+  },
+  "setting_ui_search_source": {
+    "message": "擴展搜索源"
+  },
+  "setting_ui_show_app": {
+    "message": "顯示 APP 類型的擴展"
+  },
+  "setting_ui_show_app_tip": {
+    "message": "將在 Popup 底部顯示 APP 類型的擴展，點擊圖標，可以直接啓動應用"
+  },
+  "setting_ui_show_fixed_extension": {
+    "message": "顯示固定分組中的擴展"
+  },
+  "setting_ui_show_fixed_extension_tip": {
+    "message": "固定分組中的擴展，通常為常駐擴展，如果不想在 Popup 列表中展示，可以關閉此選項"
+  },
+  "setting_ui_show_hidden_extension": {
+    "message": "顯示隱藏分組中的擴展"
+  },
+  "setting_ui_show_hidden_extension_tip": {
+    "message": "隱藏分組中的擴展，默認不在 Popup 列表中展示。如果想顯示，可以打開此選項"
+  },
+  "setting_ui_show_fixed_dot": {
+    "message": "顯示固定分組擴展右上角的小圓點"
+  },
+  "setting_ui_show_by_group": {
+    "message": "按分組顯示擴展"
+  },
+  "setting_ui_top_recently_enabled": {
+    "message": "置頂顯示最近啓用的擴展"
+  },
+  "setting_ui_top_recently_update": {
+    "message": "置頂顯示最近更新的擴展"
+  },
+  "setting_ui_top_recently_install_or_update": {
+    "message": "最近更新或者最近安裝"
+  },
+  "setting_ui_top_recently_install_or_update_tip": {
+    "message": "\"最近更新\"包括\"最近安裝\""
+  },
+  "setting_ui_top_recently_install_select": {
+    "message": "最近安裝"
+  },
+  "setting_ui_top_recently_update_select": {
+    "message": "最近更新"
+  },
+  "setting_ui_top_recently_days": {
+    "message": "最近更新的計算閾值"
+  },
+  "setting_list_view_show_button": {
+    "message": "列表視圖下，始終顯示快捷操作按鈕（默認 hover 顯示）"
+  },
+  "setting_list_gird_show_name": {
+    "message": "網格視圖下，顯示擴展名稱"
+  },
+  "setting_list_gird_show_name_tip": {
+    "message": "如果設置了擴展別名，將優先顯示別名"
+  },
+  "setting_list_gird_show_column_number": {
+    "message": "網格視圖下，擴展顯示的列數 "
+  },
+  "setting_list_gird_show_disable_gray": {
+    "message": "網格視圖下，使用灰色樣式顯示被禁用的擴展"
+  },
+  "setting_list_gird_show_menu_right_click": {
+    "message": "網格視圖下，點擊鼠標右鍵顯示操作菜單"
+  },
+  "setting_list_sort_type": {
+    "message": "排序：按照啓用頻率進行排序"
+  },
+  "setting_list_sort_type_tip": {
+    "message": "默認按照名稱排序"
+  },
+  "setting_list_default_sort_field": {
+    "message": "排序：默認排序方式"
+  },
+  "setting_list_default_sort_field_enable": {
+    "message": "啓用狀態"
+  },
+  "setting_list_default_sort_field_name": {
+    "message": "擴展名稱"
+  },
+  "setting_dark_mode_title": {
+    "message": "暗色模式"
+  },
+  "setting_dark_mode_light": {
+    "message": "明亮"
+  },
+  "setting_dark_mode_dark": {
+    "message": "黑暗"
+  },
+  "setting_dark_mode_system": {
+    "message": "跟隨系統"
+  },
+  "setting_popup_scale_title": {
+    "message": "縮放比例"
+  },
+  "setting_func_witch_group": {
+    "message": "切換分組時，啓用當前分組擴展，禁用其它的擴展"
+  },
+  "setting_func_witch_group_tip": {
+    "message": "打開此配置之後，在 Popup 中切換分組時，會禁用掉所有不是固定分組也不是當前分組中的擴展"
+  },
+  "setting_func_group_allow_multi": {
+    "message": "↑ 支持分組多選"
+  },
+  "setting_func_home_link_store": {
+    "message": "HOME 按鈕始終打開擴展的應用商店詳情頁"
+  },
+  "management_export_or_share": {
+    "message": "分享/導出"
+  },
+  "management_import": {
+    "message": "導入"
+  },
+  "management_import_extension": {
+    "message": "導入擴展"
+  },
+  "management_import_source": {
+    "message": "來源"
+  },
+  "management_import_file_text": {
+    "message": "導入文件/粘貼文本"
+  },
+  "management_import_install_extension": {
+    "message": "安裝擴展"
+  },
+  "management_prev_step": {
+    "message": "上一步"
+  },
+  "management_next_step": {
+    "message": "下一步"
+  },
+  "management_import_from_clipboard": {
+    "message": "從剪貼板中粘貼"
+  },
+  "management_import_from_file": {
+    "message": "從文件讀取"
+  },
+  "management_open_web_store": {
+    "message": "打開應用商店"
+  },
+  "management_import_prepare": {
+    "message": "準備導入"
+  },
+  "management_import_open_all_link": {
+    "message": "打開全部的商店鏈接"
+  },
+  "management_import_open_select_link": {
+    "message": "打開選中的商店鏈接"
+  },
+  "management_import_alias": {
+    "message": "導入別名"
+  },
+  "management_import_remark": {
+    "message": "導入備註"
+  },
+  "management_import_store_source": {
+    "message": "應用商店源"
+  },
+  "management_import_already": {
+    "message": "已經安裝"
+  },
+  "management_store_official": {
+    "message": "官方應用商店"
+  },
+  "management_export_share_your_extension": {
+    "message": "導出或分享你的擴展"
+  },
+  "management_export_target": {
+    "message": "目標"
+  },
+  "management_export_content": {
+    "message": "內容"
+  },
+  "management_export_type": {
+    "message": "導出方式"
+  },
+  "management_export_target_desc": {
+    "message": "選擇分享/導出的擴展"
+  },
+  "management_export_content_desc": {
+    "message": "選擇導出的自定義內容"
+  },
+  "management_export_type_desc": {
+    "message": "設置導出方式"
+  },
+  "management_export_all_extension": {
+    "message": "全部擴展"
+  },
+  "management_export_part_extension": {
+    "message": "部分擴展"
+  },
+  "management_export_no_extension_selected": {
+    "message": "沒有選擇任何擴展"
+  },
+  "management_export_extension_base_info": {
+    "message": "擴展基礎信息"
+  },
+  "management_export_share_text": {
+    "message": "分享文本"
+  },
+  "management_export_download": {
+    "message": "下載"
+  },
+  "management_export_copy_to_clipboard": {
+    "message": "複製到剪貼板"
+  },
+  "management_export_share_text_title": {
+    "message": "給你分享了 $1 個瀏覽器擴展，複製此文本到擴展管理器中導入"
+  },
+  "management_export_md_template_new": {
+    "message": "新建模板"
+  },
+  "management_export_md_template_default": {
+    "message": "默認模板"
+  },
+  "snapshot_disable_all": {
+    "message": "禁用全部擴展"
+  },
+  "snapshot_capture": {
+    "message": "保存擴展快照"
+  },
+  "snapshot_restore": {
+    "message": "恢復快照"
+  },
+  "snapshot_delete_all": {
+    "message": "刪除全部快照"
+  },
+  "end": {
+    "message": "end"
+  }
+}
