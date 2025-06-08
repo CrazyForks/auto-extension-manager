@@ -671,6 +671,9 @@
   "setting_list_sort_type_tip": {
     "message": "デフォルトではアルファベット順"
   },
+  "setting_ui_refresh_after_enable_disable": {
+    "message": "拡張機能の有効化・無効化後にポップアップリストを更新（並べ替えも実行）"
+  },
   "setting_list_default_sort_field": {
     "message": "並び替え:デフォルトの並べ替え"
   },
