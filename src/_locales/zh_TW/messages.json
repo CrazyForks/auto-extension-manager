@@ -671,6 +671,9 @@
   "setting_list_sort_type_tip": {
     "message": "默認按照名稱排序"
   },
+  "setting_ui_refresh_after_enable_disable": {
+    "message": "啟用或禁用擴展後，刷新 Popup 列表（並重新排序）"
+  },
   "setting_list_default_sort_field": {
     "message": "排序：默認排序方式"
   },
