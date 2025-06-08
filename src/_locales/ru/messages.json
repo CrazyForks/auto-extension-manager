@@ -671,6 +671,9 @@
   "setting_list_sort_type_tip": {
     "message": "По умолчанию в алфавитном порядке"
   },
+  "setting_ui_refresh_after_enable_disable": {
+    "message": "Обновлять список (и пересортировать) после включения или отключения расширения"
+  },
   "setting_list_default_sort_field": {
     "message": "Порядок: Область сортировки по умолчанию"
   },

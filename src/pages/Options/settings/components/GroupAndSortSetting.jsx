@@ -21,6 +21,8 @@ const GroupAndSortSetting = memo(({ setting, onSettingChange }) => {
 
   // Popup 中，按照频率进行排序
   const [isSortByFrequency, setIsSortByFrequency] = useState(false)
+  // Popup 中，是否启用或禁用扩展之后，立即刷新列表，重新排序
+  const [isRefreshAfterEnableDisable, setIsRefreshAfterEnableDisable] = useState(true)
 
   // 初始化
   useEffect(() => {
@@ -39,6 +41,8 @@ const GroupAndSortSetting = memo(({ setting, onSettingChange }) => {
 
     const sortByFrequency = setting.isSortByFrequency ?? false
     setIsSortByFrequency(sortByFrequency)
+    const refreshAfterEnableDisable = setting.isRefreshAfterEnableDisable ?? true
+    setIsRefreshAfterEnableDisable(refreshAfterEnableDisable)
   }, [setting])
 
   return (
@@ -149,6 +153,17 @@ const GroupAndSortSetting = memo(({ setting, onSettingChange }) => {
           </Radio.Group>
         </div>
       )}
+
+      {/* 启用或禁用扩展之后，立即刷新列表，重新排序 */}
+      <div className="setting-item">
+        <span>{getLang("setting_ui_refresh_after_enable_disable")}</span>
+        <Switch
+          size="small"
+          checked={isRefreshAfterEnableDisable ?? true}
+          onChange={(value) =>
+            onSettingChange(value, setIsRefreshAfterEnableDisable, "isRefreshAfterEnableDisable")
+          }></Switch>
+      </div>
     </div>
   )
 })
