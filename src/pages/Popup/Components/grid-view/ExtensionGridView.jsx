@@ -14,9 +14,14 @@ const ExtensionGrid = memo(({ extensions, options, isShowBottomDivider }) => {
   const items1 = items.enabled
   const items2 = items.disabled
 
-  const onItemMove = useCallback((item) => {
-    setMoved(Date.now().toString())
-  }, [])
+  const onItemMove = useCallback(
+    (item) => {
+      if (options.setting.isRefreshAfterEnableDisable) {
+        setMoved(Date.now().toString())
+      }
+    },
+    [options]
+  )
 
   // 置顶分区下方的分割线是否显示
   const dividerShow0 = items0.length > 0 && (items1.length > 0 || items2.length > 0)

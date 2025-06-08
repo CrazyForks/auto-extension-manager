@@ -15,9 +15,14 @@ const ExtensionListViewByGroup = memo(({ extensions, options }) => {
 
   const [groups] = usePopupExtensionsByGroup(extensions, options, moved)
 
-  const onItemEnableChanged = useCallback((item) => {
-    setMoved(Date.now().toString())
-  }, [])
+  const onItemEnableChanged = useCallback(
+    (item) => {
+      if (options.setting.isRefreshAfterEnableDisable) {
+        setMoved(Date.now().toString())
+      }
+    },
+    [options]
+  )
 
   return (
     <Style>

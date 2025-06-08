@@ -46,14 +46,18 @@ function IndexPopup({ originExtensions, options, params }) {
       const one = extensions.find((ext) => ext.id === info.id)
       if (one) {
         one.enabled = true
-        setExtensions([...extensions])
+        if (options.setting.isRefreshAfterEnableDisable) {
+          setExtensions([...extensions])
+        }
       }
     }
     const onDisabled = (info) => {
       const one = extensions.find((ext) => ext.id === info.id)
       if (one) {
         one.enabled = false
-        setExtensions([...extensions])
+        if (options.setting.isRefreshAfterEnableDisable) {
+          setExtensions([...extensions])
+        }
       }
     }
     chrome.management.onEnabled.addListener(onEnabled)

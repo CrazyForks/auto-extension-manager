@@ -13,9 +13,14 @@ const ExtensionGridViewByGroup = memo(({ extensions, options, isShowBottomDivide
 
   const [groups] = usePopupExtensionsByGroup(extensions, options, moved)
 
-  const onItemMove = useCallback((item) => {
-    setMoved(Date.now().toString())
-  }, [])
+  const onItemMove = useCallback(
+    (item) => {
+      if (options.setting.isRefreshAfterEnableDisable) {
+        setMoved(Date.now().toString())
+      }
+    },
+    [options]
+  )
 
   return (
     <GridViewSpaceStyle>
