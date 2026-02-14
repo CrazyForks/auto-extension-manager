@@ -8,7 +8,9 @@ import {
 } from "@ant-design/icons"
 import { Alert, Button, Space, Tag } from "antd"
 import newGithubIssueUrl from "new-github-issue-url"
+import { useTheme } from "styled-components"
 
+import DarkIcon from ".../assets/img/design-devin/Dark.svg"
 import LightIcon from ".../assets/img/design-devin/Light.svg"
 import { closeAlertTemp, compareVersion } from ".../pages/Options/utils/LatestVersionChecker.js"
 import { storage } from ".../storage/sync"
@@ -18,6 +20,9 @@ import Title from "../Title.jsx"
 import { AboutStyle } from "./AboutStyle"
 
 function About() {
+  const theme = useTheme()
+  const isDarkMode = theme.bg === "#242529"
+
   const [version, setVersion] = useState("UNKNOWN")
   const [latestVersion, setLatestVersion] = useState("")
   const [storageMessage, setStorageMessage] = useState("")
@@ -113,7 +118,7 @@ ${navigator.userAgent}`
       <Title title={getLang("about_title")}></Title>
 
       <div className="header-icon">
-        <img src={LightIcon} alt="icon" />
+        <img src={isDarkMode ? DarkIcon : LightIcon} alt="icon" />
         <div className="header-icon-text">
           <h3>Extension Manager</h3>
           <span>{getLang("about_desc")}</span>
