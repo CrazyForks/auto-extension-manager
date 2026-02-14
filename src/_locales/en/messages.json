@@ -827,6 +827,9 @@
   "snapshot_restore": {
     "message": "Restore Snapshot"
   },
+  "snapshot_rename": {
+    "message": "Rename Snapshot"
+  },
   "snapshot_delete_all": {
     "message": "Delete All Snapshots"
   },

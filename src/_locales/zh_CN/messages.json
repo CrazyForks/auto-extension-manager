@@ -827,6 +827,9 @@
   "snapshot_restore": {
     "message": "恢复快照"
   },
+  "snapshot_rename": {
+    "message": "重命名快照"
+  },
   "snapshot_delete_all": {
     "message": "删除全部快照"
   },

@@ -827,6 +827,9 @@
   "snapshot_restore": {
     "message": "Восстановление снимка"
   },
+  "snapshot_rename": {
+    "message": "Переименовать снимок"
+  },
   "snapshot_delete_all": {
     "message": "Удалить все снимки"
   },

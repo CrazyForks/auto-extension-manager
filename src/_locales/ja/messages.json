@@ -827,6 +827,9 @@
   "snapshot_restore": {
     "message": "スナップショット復元"
   },
+  "snapshot_rename": {
+    "message": "スナップショット名変更"
+  },
   "snapshot_delete_all": {
     "message": "すべて削除"
   },
