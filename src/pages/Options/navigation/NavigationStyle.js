@@ -7,17 +7,17 @@ export const NavigationStyle = styled.div`
 
   a {
     text-decoration: none;
-    color: #337ab7;
+    color: ${(props) => props.theme.nav_link};
   }
 
   h1 {
-    color: #337ab7;
+    color: ${(props) => props.theme.nav_link};
     margin-bottom: 30px;
     font-size: 24px;
     font-weight: 700;
 
     &:hover {
-      color: #23527c;
+      color: ${(props) => props.theme.nav_link_hover};
       text-decoration: underline;
     }
   }
@@ -31,12 +31,12 @@ export const NavigationStyle = styled.div`
 
     font-size: 14px;
     line-height: 36px;
-    color: #337ab7;
+    color: ${(props) => props.theme.nav_link};
 
     border-radius: 4px;
 
     &:hover {
-      background-color: #eee;
+      background-color: ${(props) => props.theme.nav_hover_bg};
     }
 
     &.active {

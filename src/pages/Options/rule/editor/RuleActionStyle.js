@@ -19,7 +19,7 @@ const Style = styled.div`
   .advance-option-tips {
     margin-left: 10px;
     font-size: 8px;
-    color: #777;
+    color: ${(props) => props.theme.fg5};
   }
 
   .action-tip-url-match {
@@ -30,7 +30,7 @@ const Style = styled.div`
     margin: 12px 0;
 
     font-size: 12px;
-    color: #777;
+    color: ${(props) => props.theme.fg5};
   }
 
   .action-show-options {

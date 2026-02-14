@@ -6,7 +6,7 @@ export const SceneStyle = styled.div`
 
   .current-active-scene-title {
     font-size: 16px;
-    color: #555;
+    color: ${(props) => props.theme.fg3};
   }
 
   .scene-item-container {
@@ -91,10 +91,10 @@ export const SceneStyle = styled.div`
 
       padding: 4px 8px;
 
-      background-color: #eee;
+      background-color: ${(props) => props.theme.scene_edit_bg};
       border-radius: 4px;
 
-      box-shadow: 1px 1px 2px 0px #ddd;
+      box-shadow: 1px 1px 2px 0px ${(props) => props.theme.scene_edit_shadow};
 
       font-size: 20px;
       color: #337ab7;
@@ -131,11 +131,10 @@ export const SceneStyle = styled.div`
     padding: 14px 16px;
 
     border-radius: calc(4px / var(--scale-x, 1));
-    box-shadow: 0 0 0 calc(1px / var(--scale-x, 1)) rgba(63, 63, 68, 0.05),
-      0 1px calc(3px / var(--scale-x, 1)) 0 rgba(34, 33, 81, 0.15);
+    box-shadow: ${(props) => props.theme.sortable_shadow};
 
     &:hover {
-      background-color: #f5f5f5;
+      background-color: ${(props) => props.theme.scene_new_hover_bg};
     }
 
     .scene-item-add-icon {
@@ -156,7 +155,7 @@ export const SceneStyle = styled.div`
     margin: 20px 10px 0px 0px;
     padding: 8px;
 
-    border: 1px solid #ccca;
+    border: 1px solid ${(props) => props.theme.border3};
     border-radius: 4px;
 
     h3 {

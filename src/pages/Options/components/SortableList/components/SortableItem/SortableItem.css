@@ -3,13 +3,16 @@
   justify-content: space-between;
   align-items: center;
   padding: 4px 8px;
-  background-color: #fff;
-  box-shadow: 0 0 0 calc(1px / var(--scale-x, 1)) rgba(63, 63, 68, 0.05),
-    0 1px calc(3px / var(--scale-x, 1)) 0 rgba(34, 33, 81, 0.15);
+  background-color: var(--sortable-item-bg, #fff);
+  box-shadow: var(
+    --sortable-shadow,
+    0 0 0 calc(1px / var(--scale-x, 1)) rgba(63, 63, 68, 0.05),
+    0 1px calc(3px / var(--scale-x, 1)) 0 rgba(34, 33, 81, 0.15)
+  );
   border-radius: calc(4px / var(--scale-x, 1));
   box-sizing: border-box;
   list-style: none;
-  color: #333;
+  color: var(--sortable-item-color, #333);
 }
 
 .DragHandle {
@@ -30,7 +33,7 @@
 }
 
 .DragHandle:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: var(--drag-handle-hover-bg, rgba(0, 0, 0, 0.05));
 }
 
 .DragHandle:focus-visible {
@@ -42,5 +45,5 @@
   margin: auto;
   height: 100%;
   overflow: visible;
-  fill: #919eab;
+  fill: var(--drag-handle-fill, #919eab);
 }

@@ -226,10 +226,10 @@ const Style = styled.div`
     margin-top: 4px;
     padding: 2px;
 
-    color: #888;
+    color: ${(props) => props.theme.fg6};
     font-size: 12px;
 
-    border: 1px dashed #ddd;
+    border: 1px dashed ${(props) => props.theme.border2};
     border-radius: 4px;
   }
 `

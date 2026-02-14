@@ -10,11 +10,11 @@ export const GroupContentStyle = styled.div`
     margin: 20px 36px 0 10px;
     padding-left: 5px;
 
-    color: #888;
+    color: ${(props) => props.theme.fg6};
     font-size: 14px;
     line-height: 20px;
 
-    border-left: 2px solid #cccccc;
+    border-left: 2px solid ${(props) => props.theme.border3};
   }
 
   .other-group-info-container {
@@ -24,9 +24,9 @@ export const GroupContentStyle = styled.div`
   .other-group-info-name {
     margin: 1px 0;
     padding: 2px 4px;
-    color: #666;
+    color: ${(props) => props.theme.group_other_color};
     border-radius: 2px;
-    background-color: #ddd;
+    background-color: ${(props) => props.theme.group_other_bg};
   }
 
   .group-name-title {
@@ -36,6 +36,6 @@ export const GroupContentStyle = styled.div`
     margin-bottom: 10px;
     padding-bottom: 5px;
 
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid ${(props) => props.theme.border};
   }
 `

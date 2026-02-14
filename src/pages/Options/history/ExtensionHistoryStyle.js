@@ -64,7 +64,7 @@ const Style = styled.div`
     top: -2px;
     right: 2px;
     font-size: 16px;
-    color: #337ab7;
+    color: ${(props) => props.theme.nav_link};
 
     & > .ant-space:nth-child(1) {
       margin-right: 12px;

@@ -41,11 +41,11 @@ const Style = styled.div`
     & > h3 {
       font-weight: 700;
       font-size: 15px;
-      color: #333;
+      color: ${(props) => props.theme.fg2};
     }
 
     & > hr {
-      border: 1px solid #ccc;
+      border: 1px solid ${(props) => props.theme.border3};
       margin: 10px -5px;
     }
 
@@ -56,7 +56,8 @@ const Style = styled.div`
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: ${(props) =>
+        props.theme.bg === "#242529" ? "rgba(36, 37, 41, 0.85)" : "rgba(255, 255, 255, 0.8)"};
       border-radius: 6px;
       filter: blur(1px);
       z-index: -1;

@@ -63,8 +63,10 @@ const SearchStyle = styled.div`
     height: 24px;
 
     outline-style: none;
-    border: 1px solid #ccc;
+    border: 1px solid ${(props) => props.theme.border3};
     border-radius: 4px;
+    background-color: ${(props) => props.theme.bg};
+    color: ${(props) => props.theme.fg};
 
     &:focus {
       border-color: #66afe9;

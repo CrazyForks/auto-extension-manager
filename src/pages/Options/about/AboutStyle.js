@@ -64,12 +64,12 @@ export const AboutStyle = styled.div`
 
     margin-top: 20px;
     padding-top: 5px;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid ${(props) => props.theme.border3};
 
     .storage-detail-tip-icon {
       margin-left: 5px;
       &:hover {
-        color: #888;
+        color: ${(props) => props.theme.fg6};
       }
     }
   }

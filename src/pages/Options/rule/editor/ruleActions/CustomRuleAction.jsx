@@ -216,12 +216,12 @@ export default memo(forwardRef(CustomRuleAction))
 const Style = styled.div`
   margin: 10px 0;
   border-radius: 5px;
-  border: 1px dashed #ccc;
+  border: 1px dashed ${(props) => props.theme.border3};
 
   .steps-container {
     padding: 5px 20px 5px 5px;
 
-    background: linear-gradient(135deg, #757f9a88, #d7dde888);
+    background: ${(props) => props.theme.setting_gradient};
     border-radius: 5px 5px 0 0;
   }
 

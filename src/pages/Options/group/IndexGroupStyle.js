@@ -41,7 +41,7 @@ export const GroupStyle = styled.div`
     padding: 5px 0 5px 5px;
 
     border-radius: 4px;
-    border: 1px solid #eee;
+    border: 1px solid ${(props) => props.theme.border};
 
     & > * {
       margin-right: 16px;

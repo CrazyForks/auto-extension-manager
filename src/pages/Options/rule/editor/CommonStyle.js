@@ -21,6 +21,7 @@ const EditorCommonStyle = styled.div`
     .title {
       font-size: 18px;
       font-weight: bold;
+      color: ${(props) => props.theme.fg2};
     }
   }
 `

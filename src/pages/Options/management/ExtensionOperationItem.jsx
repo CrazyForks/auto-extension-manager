@@ -107,7 +107,7 @@ const Style = styled.span`
   align-items: center;
 
   .operation-menu-item-disabled {
-    color: #ccc;
+    color: ${(props) => props.theme.fg5};
     margin-left: 16px;
     font-size: 14px;
     transform: scale(1.4);

@@ -5,7 +5,7 @@ const Style = styled.div`
     display: inline-block;
     margin-top: 10px;
     margin-bottom: 20px;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid ${(props) => props.theme.border3};
 
     & > button {
       width: 100px;

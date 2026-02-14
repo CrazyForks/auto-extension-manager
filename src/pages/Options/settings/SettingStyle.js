@@ -6,9 +6,9 @@ export const SettingStyle = styled.div`
   .container {
     width: 660px;
 
-    background: linear-gradient(to right, #337ab7aa, #fff);
+    background: ${(props) => props.theme.setting_gradient};
 
-    border: 1px solid #ddd;
+    border: 1px solid ${(props) => props.theme.border2};
     border-radius: 5px;
   }
 
@@ -16,7 +16,7 @@ export const SettingStyle = styled.div`
     margin: 10px 0;
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: ${(props) => props.theme.fg2};
   }
 
   .setting-space-title {
@@ -24,13 +24,13 @@ export const SettingStyle = styled.div`
 
     &::before {
       content: "--";
-      color: #777;
+      color: ${(props) => props.theme.fg5};
       padding: 0 8px;
     }
 
     &::after {
       content: "--";
-      color: #777;
+      color: ${(props) => props.theme.fg5};
       padding: 0 8px;
     }
   }
@@ -41,7 +41,7 @@ export const SettingStyle = styled.div`
     margin: 5px 10px;
     padding: 5px 0 8px 0;
 
-    border-bottom: 1px solid #eee6;
+    border-bottom: 1px solid ${(props) => props.theme.setting_border_bottom};
 
     span {
       flex: 1 1 auto;

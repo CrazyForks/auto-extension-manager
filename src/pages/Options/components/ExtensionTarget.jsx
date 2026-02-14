@@ -164,7 +164,7 @@ const Style = styled.div`
     }
 
     .ant-tag-checkable {
-      border: 1px solid #d9d9d9;
+      border: 1px solid ${(props) => props.theme.border2};
     }
 
     .ant-tag-checkable-checked {

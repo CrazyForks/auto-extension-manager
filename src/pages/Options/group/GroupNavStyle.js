@@ -12,7 +12,7 @@ export const GroupNavStyle = styled.div`
 
     // border: 1px solid #337ab7;
     border-radius: 5px;
-    box-shadow: 1px 1px 4px 0px #337ab788;
+    box-shadow: ${(props) => props.theme.card_shadow};
 
     user-select: none;
 
@@ -34,7 +34,7 @@ export const GroupNavStyle = styled.div`
   .tab-container .tab-operation {
     flex: 0 0 auto;
     display: none;
-    color: #23527c;
+    color: ${(props) => props.theme.nav_link_hover};
     font-size: 18px;
   }
 
@@ -47,7 +47,7 @@ export const GroupNavStyle = styled.div`
   }
 
   .add-new-group {
-    color: #23527c;
+    color: ${(props) => props.theme.nav_link_hover};
     font-size: 18px;
     justify-content: center;
   }

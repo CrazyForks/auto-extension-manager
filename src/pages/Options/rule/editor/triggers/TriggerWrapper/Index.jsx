@@ -23,7 +23,7 @@ const TriggerWrapper = memo((props) => {
 export default TriggerWrapper
 
 const Style = styled.div`
-  border: 1px solid #ccc;
+  border: 1px solid ${(props) => props.theme.border3};
   border-radius: 5px;
 
   margin: 10px 200px 10px 0;
@@ -40,7 +40,7 @@ const Style = styled.div`
     font-weight: 700;
     border-radius: 5px 5px 0 0;
 
-    background: #f5f5f5;
+    background: ${(props) => props.theme.scene_new_hover_bg};
 
     .header-title {
       flex: 1 1 auto;

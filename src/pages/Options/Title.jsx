@@ -1,8 +1,9 @@
 import React from "react"
+
 import styled from "styled-components"
 
 const TitleStyle = styled.div`
-  color: #333;
+  color: ${(props) => props.theme.fg2};
 
   h1 {
     font-size: 30px;
@@ -10,7 +11,7 @@ const TitleStyle = styled.div`
   }
 
   .box {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid ${(props) => props.theme.border};
     margin-bottom: 10px;
   }
 `

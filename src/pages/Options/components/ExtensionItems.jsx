@@ -99,9 +99,9 @@ const Style = styled.div`
     height: 12px;
     margin: 0;
 
-    border: 3px solid #888;
+    border: 3px solid ${(props) => props.theme.fg6};
     border-radius: 6px;
-    box-shadow: 0 0 0px 1px #fff;
+    box-shadow: 0 0 0px 1px ${(props) => props.theme.bg};
 
     background-color: #3ffa7b;
   }
@@ -123,7 +123,7 @@ const Style = styled.div`
   }
 
   .not-enable {
-    color: #cccccc;
+    color: ${(props) => props.theme.fg5};
   }
 
   .placeholder {
@@ -131,10 +131,10 @@ const Style = styled.div`
     margin-bottom: 20px;
     padding-left: 5px;
 
-    color: #888;
+    color: ${(props) => props.theme.fg6};
     font-size: 14px;
     line-height: 20px;
 
-    border-left: 2px solid #cccccc;
+    border-left: 2px solid ${(props) => props.theme.border3};
   }
 `
