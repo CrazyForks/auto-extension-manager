@@ -11,8 +11,17 @@ export const MoreOperationDropdownSnapshotStyle = styled.div`
     text-align: left;
   }
 
-  .snapshot-close-btn {
+  .snapshot-action-btn {
     margin-left: 6px;
+  }
+
+  .snapshot-rename-btn {
+    &:hover {
+      color: #1890ff;
+    }
+  }
+
+  .snapshot-close-btn {
     &:hover {
       color: red;
     }

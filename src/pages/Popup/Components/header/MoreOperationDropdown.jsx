@@ -1,8 +1,9 @@
-import React, { memo, useEffect, useRef, useState } from "react"
+import React, { memo, useEffect, useState } from "react"
 
 import {
   CloseOutlined,
   CopyOutlined,
+  EditOutlined,
   MenuOutlined,
   MoreOutlined,
   RedoOutlined
@@ -66,6 +67,19 @@ const MoreOperationDropdown = memo(({ options, className, messageApi }) => {
     updateView()
   }
 
+  function renameSnapshot(snapshot) {
+    const newName = prompt(
+      getLang("snapshot_rename") || "Rename snapshot",
+      snapshot.name || snapshot.key
+    )
+    if (newName !== null && newName.trim() !== "") {
+      snapshot.name = newName.trim()
+      forage.setItem(snapshot.key, snapshot)
+      messageApi.info(`rename snapshot to ${newName.trim()}`)
+      updateView()
+    }
+  }
+
   function updateView() {
     setRefreshKey((prevKey) => prevKey + 1)
   }
@@ -81,15 +95,21 @@ const MoreOperationDropdown = memo(({ options, className, messageApi }) => {
       const deleteOne = () => {
         deleteSnapshot(snapshot)
       }
+      const renameOne = () => {
+        renameSnapshot(snapshot)
+      }
 
       snapshots.unshift({
         key: key,
         label: (
           <MoreOperationDropdownSnapshotStyle>
             <span className="snapshot-label" onClick={resumeOne}>
-              {key}
+              {snapshot.name || key}
             </span>
-            <Space className="snapshot-close-btn" onClick={deleteOne}>
+            <Space className="snapshot-action-btn snapshot-rename-btn" onClick={renameOne}>
+              <EditOutlined />
+            </Space>
+            <Space className="snapshot-action-btn snapshot-close-btn" onClick={deleteOne}>
               <CloseOutlined />
             </Space>
           </MoreOperationDropdownSnapshotStyle>
@@ -142,7 +162,7 @@ const MoreOperationDropdown = memo(({ options, className, messageApi }) => {
     }
 
     const snapshotKey = dayjs().format("MMDD.HHmmss")
-    forage.setItem(snapshotKey, { key: snapshotKey, states: extSnapshotStats })
+    forage.setItem(snapshotKey, { key: snapshotKey, name: snapshotKey, states: extSnapshotStats })
     messageApi.info(`snapshot save success. ${snapshotKey}`)
 
     updateView()
