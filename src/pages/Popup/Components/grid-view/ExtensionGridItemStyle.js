@@ -37,6 +37,48 @@ export const ExtensionGridItemStyle = styled.div`
     user-select: none;
   }
 
+  .grid-name-tooltip {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+
+    max-width: 300px;
+    padding: 4px 8px;
+
+    font-size: 12px;
+    line-height: 1.4;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    white-space: normal;
+    word-break: break-word;
+    pointer-events: none;
+    user-select: none;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .grid-name-tooltip-show {
+    display: block;
+  }
+
+  .tooltip-arrow {
+    position: absolute;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    transform: translateX(-50%);
+  }
+
+  .tooltip-arrow-top {
+    top: -4px;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.75);
+  }
+
+  .tooltip-arrow-bottom {
+    bottom: -4px;
+    border-top: 4px solid rgba(0, 0, 0, 0.75);
+  }
+
   .grid-display-item-title-gray {
     color: ${(props) => props.theme.disable_text};
   }

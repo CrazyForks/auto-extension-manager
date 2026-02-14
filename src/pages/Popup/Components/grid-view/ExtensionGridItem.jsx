@@ -61,6 +61,9 @@ const ExtensionGridItem = memo(({ item, options, enabled, onItemMove }) => {
 
   const containerRef = useRef(null)
   const menuRef = useRef(null)
+  const tooltipRef = useRef(null)
+  // tooltip 固定定位的坐标
+  const [tooltipStyle, setTooltipStyle] = useState({})
 
   const checkMenuPosition = () => {
     const containerRect = containerRef.current.getBoundingClientRect()
@@ -74,8 +77,50 @@ const ExtensionGridItem = memo(({ item, options, enabled, onItemMove }) => {
     }
   }
 
+  const checkTooltipPosition = () => {
+    if (!tooltipRef.current || !containerRef.current) return
+    const containerRect = containerRef.current.getBoundingClientRect()
+    const tooltipEl = tooltipRef.current
+    // 先临时显示以获取尺寸
+    tooltipEl.style.visibility = "hidden"
+    tooltipEl.style.display = "block"
+    const tooltipRect = tooltipEl.getBoundingClientRect()
+    tooltipEl.style.visibility = ""
+    tooltipEl.style.display = ""
+
+    const margin = 6
+    const arrowSize = 5
+    const style = {}
+
+    // 垂直方向：优先显示在下方，空间不足则显示在上方
+    const bottomSpace = window.innerHeight - containerRect.bottom
+    if (bottomSpace < tooltipRect.height + margin + arrowSize) {
+      style.top = containerRect.top - tooltipRect.height - arrowSize - margin
+      style.arrowVertical = "bottom" // 箭头在 tooltip 下方
+    } else {
+      style.top = containerRect.bottom + arrowSize + margin
+      style.arrowVertical = "top" // 箭头在 tooltip 上方
+    }
+
+    // 水平方向：优先居中，空间不足则偏移
+    const centerX = containerRect.left + containerRect.width / 2
+    let left = centerX - tooltipRect.width / 2
+    if (left < margin) {
+      left = margin
+    } else if (left + tooltipRect.width > window.innerWidth - margin) {
+      left = window.innerWidth - margin - tooltipRect.width
+    }
+    style.left = left
+
+    // 箭头水平位置（相对 tooltip 左边距）
+    style.arrowLeft = Math.max(8, Math.min(centerX - left, tooltipRect.width - 8))
+
+    setTooltipStyle(style)
+  }
+
   useEffect(() => {
     checkMenuPosition()
+    checkTooltipPosition()
   }, [isMouseEnter, isMouseRightClick])
 
   const handleItemMouseEnter = () => {
@@ -218,6 +263,27 @@ const ExtensionGridItem = memo(({ item, options, enabled, onItemMove }) => {
           )}
         </div>
         {itemPined && isShowDotOfFixedExtension && <i className="item-pined-dot"></i>}
+      </div>
+
+      {/* 名称 tooltip（fixed 定位，脱离层叠上下文） */}
+      <div
+        ref={tooltipRef}
+        className={classNames([
+          "grid-name-tooltip",
+          { "grid-name-tooltip-show": isMouseEnter || isMenuShow }
+        ])}
+        style={
+          tooltipStyle.top !== undefined ? { top: tooltipStyle.top, left: tooltipStyle.left } : {}
+        }>
+        {/* 箭头 */}
+        <span
+          className={classNames([
+            "tooltip-arrow",
+            tooltipStyle.arrowVertical === "bottom" ? "tooltip-arrow-bottom" : "tooltip-arrow-top"
+          ])}
+          style={tooltipStyle.arrowLeft !== undefined ? { left: tooltipStyle.arrowLeft } : {}}
+        />
+        {item.name}
       </div>
 
       {/* hover 菜单 */}
