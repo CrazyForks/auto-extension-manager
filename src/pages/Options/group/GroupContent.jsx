@@ -1,6 +1,6 @@
 import React, { memo, useEffect, useState } from "react"
 
-import { Button, Checkbox, Input, notification } from "antd"
+import { Input, Segmented, notification } from "antd"
 
 import { isExtensionMatch } from ".../utils/searchHelper"
 import { getLang } from ".../utils/utils"
@@ -13,7 +13,16 @@ const { Search } = Input
  * 分组内容：标题，在分组中的扩展，不在分组中的扩展，描述
  */
 const GroupContent = memo((props) => {
-  const { group, groupList, options, onItemClick, containExts, noneGroupExts } = props
+  const {
+    group,
+    groupList,
+    options,
+    onItemClick,
+    containExts,
+    noneGroupExts,
+    sortType,
+    onSortTypeChange
+  } = props
 
   const [notificationApi, notificationContextHolder] = notification.useNotification()
 
@@ -46,12 +55,22 @@ const GroupContent = memo((props) => {
   return (
     <GroupContentStyle>
       {notificationContextHolder}
-      <Search
-        className="search"
-        placeholder="search"
-        onSearch={onSearch}
-        onChange={(e) => onSearch(e.target.value)}
-      />
+      <div className="search-sort-bar">
+        <Search
+          className="search"
+          placeholder="search"
+          onSearch={onSearch}
+          onChange={(e) => onSearch(e.target.value)}
+        />
+        <Segmented
+          value={sortType}
+          onChange={onSortTypeChange}
+          options={[
+            { label: getLang("group_sort_by_name"), value: "name" },
+            { label: getLang("group_sort_by_install_time"), value: "installTime" }
+          ]}
+        />
+      </div>
       <h3 className="group-name-title">{getLang("group_include", group.name)}</h3>
 
       <GroupContentSpace

@@ -833,6 +833,12 @@
   "snapshot_delete_all": {
     "message": "すべて削除"
   },
+  "group_sort_by_name": {
+    "message": "名前順で並べ替え"
+  },
+  "group_sort_by_install_time": {
+    "message": "インストール時間順で並べ替え"
+  },
   "end": {
     "message": "終了"
   }

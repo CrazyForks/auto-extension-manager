@@ -833,6 +833,12 @@
   "snapshot_delete_all": {
     "message": "Delete All Snapshots"
   },
+  "group_sort_by_name": {
+    "message": "Sort by Name"
+  },
+  "group_sort_by_install_time": {
+    "message": "Sort by Install Time"
+  },
   "end": {
     "message": "end"
   }

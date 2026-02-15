@@ -43,6 +43,9 @@ function GroupManagement() {
   // 未分组扩展中，不显示其它分组的扩展
   const [hiddenOtherGroupInNoneGroup, setHiddenOtherGroupInNoneGroup] = useState(false)
 
+  // 排序方式：name 按名称排序，installTime 按安装时间排序
+  const [sortType, setSortType] = useState("name")
+
   const [containExts, noneGroupExts, onItemClick] = useGroupItems(
     selectedGroup,
     groupListInfo,
@@ -51,7 +54,8 @@ function GroupManagement() {
       hiddenFixedGroupInNoneGroup,
       hiddenHiddenGroupInNoneGroup,
       hiddenOtherGroupInNoneGroup
-    }
+    },
+    sortType
   )
 
   async function updateByGroupConfigs() {
@@ -200,7 +204,9 @@ function GroupManagement() {
                 group={selectedGroup}
                 groupList={groupListInfo}
                 options={options}
-                onItemClick={onItemClick}>
+                onItemClick={onItemClick}
+                sortType={sortType}
+                onSortTypeChange={setSortType}>
                 <div className="group-not-include-filter">
                   <Checkbox
                     checked={hiddenFixedGroupInNoneGroup}

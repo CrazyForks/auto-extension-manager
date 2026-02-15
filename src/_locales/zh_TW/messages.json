@@ -833,6 +833,12 @@
   "snapshot_delete_all": {
     "message": "刪除全部快照"
   },
+  "group_sort_by_name": {
+    "message": "按名稱排序"
+  },
+  "group_sort_by_install_time": {
+    "message": "按安裝時間排序"
+  },
   "end": {
     "message": "end"
   }

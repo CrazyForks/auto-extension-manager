@@ -833,6 +833,12 @@
   "snapshot_delete_all": {
     "message": "Удалить все снимки"
   },
+  "group_sort_by_name": {
+    "message": "Сортировка по имени"
+  },
+  "group_sort_by_install_time": {
+    "message": "Сортировка по дате установки"
+  },
   "end": {
     "message": "Окончено"
   }

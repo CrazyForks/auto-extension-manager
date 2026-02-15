@@ -129,7 +129,8 @@ const GroupContentSpace = memo((props) => {
       placeholder="none"
       options={options}
       showFixedPin={shouldShowFixedPin}
-      footer={otherGroupInfoFooter}></ExtensionItems>
+      footer={otherGroupInfoFooter}
+      skipSort={true}></ExtensionItems>
   )
 })
 

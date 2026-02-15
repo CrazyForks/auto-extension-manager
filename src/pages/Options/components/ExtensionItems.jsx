@@ -13,53 +13,55 @@ import { appendAdditionInfo, sortExtension } from ".../utils/extensionHelper"
  * @param placeholder 列表中没有内容时，显示的提示文字
  * @param onClick 点击单个扩展项时的回调
  */
-const ExtensionItems = memo(({ items, placeholder, onClick, options, showFixedPin, footer }) => {
-  const isEmpty = !items || items.length === 0
+const ExtensionItems = memo(
+  ({ items, placeholder, onClick, options, showFixedPin, footer, skipSort }) => {
+    const isEmpty = !items || items.length === 0
 
-  // 附加了额外信息的扩展列表
-  const extensions = appendAdditionInfo(items, options?.management)
-  const sortedItems = sortExtension(extensions)
+    // 附加了额外信息的扩展列表
+    const extensions = appendAdditionInfo(items, options?.management)
+    const sortedItems = skipSort ? extensions : sortExtension(extensions)
 
-  const flipKey = items.map((i) => i.id.slice(0, 4)).join("") // 此值变化，则 Flipper 会执行动画
+    const flipKey = items.map((i) => i.id.slice(0, 4)).join("") // 此值变化，则 Flipper 会执行动画
 
-  return (
-    <Style>
-      {isEmpty ? (
-        <p className="placeholder">{placeholder}</p>
-      ) : (
-        <Flipper flipKey={flipKey}>
-          <ul>
-            {sortedItems.map((item) => {
-              // 如果存在别名，则显示别名
-              const showName = item.__attach__?.alias ? item.__attach__?.alias : item.name
+    return (
+      <Style>
+        {isEmpty ? (
+          <p className="placeholder">{placeholder}</p>
+        ) : (
+          <Flipper flipKey={flipKey}>
+            <ul>
+              {sortedItems.map((item) => {
+                // 如果存在别名，则显示别名
+                const showName = item.__attach__?.alias ? item.__attach__?.alias : item.name
 
-              return (
-                <Flipped key={item.id} flipId={item.id}>
-                  <li
-                    key={item.id}
-                    className={classNames({
-                      "not-enable": !item.enabled
-                    })}>
-                    <Tooltip placement="top" title={item.name}>
-                      <div className="ext-item" onClick={(e) => onClick(e, item)}>
-                        <div>
-                          <img src={getIcon(item, 128)} alt="" />
-                          {showFixedPin?.(item) && <i className="ext-item-fixed-dot"></i>}
+                return (
+                  <Flipped key={item.id} flipId={item.id}>
+                    <li
+                      key={item.id}
+                      className={classNames({
+                        "not-enable": !item.enabled
+                      })}>
+                      <Tooltip placement="top" title={item.name}>
+                        <div className="ext-item" onClick={(e) => onClick(e, item)}>
+                          <div>
+                            <img src={getIcon(item, 128)} alt="" />
+                            {showFixedPin?.(item) && <i className="ext-item-fixed-dot"></i>}
+                          </div>
+                          <span>{showName}</span>
                         </div>
-                        <span>{showName}</span>
-                      </div>
-                    </Tooltip>
-                    {footer?.(item)}
-                  </li>
-                </Flipped>
-              )
-            })}
-          </ul>
-        </Flipper>
-      )}
-    </Style>
-  )
-})
+                      </Tooltip>
+                      {footer?.(item)}
+                    </li>
+                  </Flipped>
+                )
+              })}
+            </ul>
+          </Flipper>
+        )}
+      </Style>
+    )
+  }
+)
 
 export default ExtensionItems
 

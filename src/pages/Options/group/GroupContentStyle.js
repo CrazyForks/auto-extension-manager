@@ -1,9 +1,15 @@
 import styled from "styled-components"
 
 export const GroupContentStyle = styled.div`
+  .search-sort-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
   .search {
     width: 300px;
-    margin-bottom: 10px;
   }
 
   .desc {
